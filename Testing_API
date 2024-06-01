@@ -1,0 +1,14 @@
+import requests
+
+url = 'http://127.0.0.1:5000/predict'
+data = {
+    'tenure': 12,
+    'MonthlyCharges': 70.35,
+    'TotalCharges': 845.5,
+    'Contract_Two year': 0,
+    'InternetService_Fiber optic': 1,
+    'PaymentMethod_Electronic check': 1
+}
+
+response = requests.post(url, json=data)
+print(response.json())
